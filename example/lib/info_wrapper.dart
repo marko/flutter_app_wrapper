@@ -33,6 +33,7 @@ class InformationBar extends StatelessWidget {
     return Material(
       child: AnimatedBar(
         show: InformationScope.of(context),
+        axisAlignment: 1,
         child: ColoredBox(
           color: Colors.orange,
           child: Padding(

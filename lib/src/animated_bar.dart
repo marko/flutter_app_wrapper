@@ -7,12 +7,14 @@ class AnimatedBar extends StatefulWidget {
     this.show = true,
     this.duration = const Duration(milliseconds: 1000),
     this.curve = Curves.easeInOutCubic,
+    required this.axisAlignment,
     required this.child,
   });
 
   final bool show;
   final Duration duration;
   final Curve curve;
+  final double axisAlignment;
   final Widget child;
 
   @override
@@ -61,7 +63,7 @@ class _AnimatedBarState extends State<AnimatedBar>
   @override
   Widget build(BuildContext context) {
     return SizeTransition(
-      axisAlignment: 1,
+      axisAlignment: widget.axisAlignment,
       sizeFactor: _animation,
       child: widget.child,
     );
