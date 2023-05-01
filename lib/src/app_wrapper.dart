@@ -7,12 +7,12 @@ class AppWrapper extends StatelessWidget {
   const AppWrapper({
     super.key,
     this.direction = AxisDirection.up,
-    required this.absorber,
+    required this.outer,
     required this.child,
   });
 
   final AxisDirection direction;
-  final Widget absorber;
+  final Widget outer;
   final Widget child;
 
   @override
@@ -29,7 +29,7 @@ class AppWrapper extends StatelessWidget {
           mainAxisAlignment: alignment,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            absorber,
+            outer,
             Expanded(
               child: LayoutBuilder(
                 builder: (innerContext, innerConstraints) {

@@ -14,7 +14,7 @@ class InformationBarWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     return Information(
       child: AppWrapper(
-        absorber: const InformationBar(),
+        outer: const InformationBar(),
         child: child,
       ),
     );
